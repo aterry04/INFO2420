@@ -10,41 +10,28 @@ if (document.images) {
 }
 
 
-		var imgArray = new Array(
-			'Images/fullsize/Image1Lg.jpg',
-			'Images/fullsize/Image2Lg.jpg',
-			'Images/fullsize/Image3Lg.jpg',
-			'Images/fullsize/Image4Lg.jpg'
-			
+	var imgArray = [
+		'Images/fullsize/Image1Lg.jpg',
+		'Images/fullsize/Image2Lg.jpg',
+		'Images/fullsize/Image3Lg.jpg',
+		'Images/fullsize/Image4Lg.jpg'
+	];
 
-		);
+	var titleArray = [
+		'Heron Drinking From Pond',
+		'Pigeon Perched on Stones',
+		'Cardinal on a Snowy Branch',
+		'Pelicans at the Beach'
+	];
 
+	function swapImage(imgID) {
+		var theImage = document.getElementById('theImage');
+		var textDiv = document.getElementById('bottomText');
 
-		var titleArray = new Array(
-			'Heron Drinking From Pond',
-			'Pigeon Perched on Stones',
-			'Cardinal on a Snowy Branch',
-			'Pelicans at the Beach'
-			
-		);
-			
-		var imgPath = "Images/fullsize/";
-		
-		function swapImage(imgID) {
+		theImage.src = imgArray[imgID];
+		textDiv.innerHTML = titleArray[imgID];
+	}
 
-			var theImage = document.getElementById('theImage');
-			var textDiv = document.getElementById('bottomText');
-
-			var newImg;
-			var textTitle;
-
-			newImg = imgArray[imgID];
-			theImage.src = imgPath + newImg;
-
-			textTitle=titleArray[imgID];
-
-      			textDiv.innerHTML = textTitle;
-		}
 			
 		function preloadImages() {		
 			for(var i = 0; i < imgArray.length; i++) {
