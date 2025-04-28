@@ -135,15 +135,13 @@
 
 <p> <a href="#Top">Return to Top</a> </p>
 	  
-<div style="text-align: center;">
-<a href="" onMouseOver="document.PrintButton1.src=PrintButton2.src;"
-	onMouseOut="document.PrintButton2.src=PrintButton1.src;"
-   onclick="window.print(); return false;">
-
-<img src="images/print1.jpg" width="250" height="50" 
-	name="PrintButton" alt="PrintButton" style="border:none;"/>
-</a>
-</div>
+    <div style="text-align: center;">
+        <a href="#" onMouseOver="document.getElementById('PrintButton').src = PrintButton2.src;"
+           onMouseOut="document.getElementById('PrintButton').src = PrintButton1.src;"
+           onclick="window.print(); return false;">
+            <img id="PrintButton" src="Images/print1.jpg" alt="Print Button" style="border:none;" />
+        </a>
+    </div>
 
 <br>
   </article>

@@ -40,4 +40,5 @@ if (document.images) {
 			}
 		}
 		
+
 // JavaScript Document
